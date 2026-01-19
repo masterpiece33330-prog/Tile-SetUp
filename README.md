@@ -16,19 +16,46 @@ Tile Set Up은 타일 시공 전문가를 위한 모바일 앱입니다. 정밀�
 
 ## 🚀 시작하기
 
+> 📦 **상세한 설치 가이드는 [INSTALL.md](./INSTALL.md)를 참조하세요.**
+
 ### 요구사항
 
 - Node.js 18+
 - npm 또는 yarn
-- Expo CLI (`npm install -g expo-cli`)
-- iOS Simulator (Mac) 또는 Android Emulator
+- Expo CLI (자동 설치됨)
+- iOS Simulator (Mac) 또는 Android Emulator (선택사항)
 
-### 설치
+### 빠른 설치 (권장)
+
+**Windows:**
+```powershell
+# PowerShell에서 실행
+.\install.ps1
+
+# 또는 배치 파일 더블클릭
+install.bat
+```
+
+**Mac/Linux:**
+```bash
+# 실행 권한 부여
+chmod +x install.sh
+
+# 설치 스크립트 실행
+./install.sh
+```
+
+설치 스크립트가 자동으로:
+- ✅ Node.js 및 npm 버전 확인
+- ✅ Expo CLI 설치 확인
+- ✅ 프로젝트 의존성 설치
+
+### 수동 설치
 
 ```bash
 # 저장소 클론
-git clone https://github.com/your-org/tile-setup.git
-cd tile-setup
+git clone https://github.com/masterpiece33330-prog/Tile-SetUp.git
+cd Tile-SetUp
 
 # 의존성 설치
 npm install
@@ -39,16 +66,30 @@ npm start
 
 ### 실행
 
+설치 완료 후:
+
 ```bash
-# iOS 시뮬레이터
+# Expo 개발 서버 시작 (캐시 초기화)
+npx expo start --clear
+
+# 또는
+npm start
+```
+
+**실제 기기에서 테스트:**
+1. **Expo Go** 앱 설치
+   - iOS: [App Store](https://apps.apple.com/app/expo-go/id982107779)
+   - Android: [Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
+2. 터미널에 나타난 **QR 코드** 스캔
+3. 앱이 로딩됩니다!
+
+**시뮬레이터/에뮬레이터:**
+```bash
+# iOS 시뮬레이터 (Mac만)
 npm run ios
 
 # Android 에뮬레이터
 npm run android
-
-# Expo Go 앱 (실제 기기)
-npm start
-# → QR 코드 스캔
 ```
 
 ## 📁 프로젝트 구조
